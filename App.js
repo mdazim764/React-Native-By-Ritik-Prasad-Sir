@@ -1,36 +1,30 @@
-import React, {Component} from 'react';
-import {View} from 'react-native';
+import React from 'react';
+import LifecycleComponent from './src/Basic/components/ClassComponents';
+import {StyleSheet, View} from 'react-native';
+import FunctionComponent from './src/Basic/components/FunctionComponent';
 
-class LifecycleComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-    console.log('constructor: Component initialized');
-    console.log('constructor');
-  }
+const App = () => {
+  return (
+    <View style={styles.container}>
+      {/* <LifecycleComponent /> */}
+      <FunctionComponent />
+      {/* <View style={styles.flex2} />
+      <View style={styles.flex3} /> */}
+    </View>
+  );
+};
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    // flexDirection: 'row',
+  },
+  // flex2: {
+  //   flex: 1,
+  // },
+  // flex3: {
+  //   flex: 1,
+  //   backgroundColor: 'green',
+  // },
+});
 
-  componentDidMount() {
-    console.log('componentDidMount');
-  }
-
-  componentDidUpdate() {
-    console.log('componentDidUpdate');
-  }
-
-  componentWillUnmount() {
-    console.log('componentWillUnmount');
-  }
-
-  render() {
-    console.log('render');
-    return (
-      <View>
-        <h1>Life Cycle Component</h1>
-      </View>
-    );
-  }
-}
-
-export default LifecycleComponent;
+export default App;
