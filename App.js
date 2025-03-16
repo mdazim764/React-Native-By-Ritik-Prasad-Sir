@@ -2,12 +2,14 @@ import React from 'react';
 import LifecycleComponent from './src/Basic/components/ClassComponents';
 import {StyleSheet, View} from 'react-native';
 import FunctionComponent from './src/Basic/components/FunctionComponent';
-
+import BasicComponents from './src/Basic/components/BasicComponents';
 const App = () => {
   return (
     <View style={styles.container}>
       {/* <LifecycleComponent /> */}
-      <FunctionComponent />
+      {/* <FunctionComponent /> */}
+      <BasicComponents />
+
       {/* <View style={styles.flex2} />
       <View style={styles.flex3} /> */}
     </View>
